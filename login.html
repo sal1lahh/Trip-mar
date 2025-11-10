@@ -3,35 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="login.css">
     <meta name="author" content="EST students">
-    <meta name="description" content="Morocco tourists login page">
+    <meta name="description" content="login or signup">
     <link rel="icon" href="login.png">
     <meta http-equiv="refresh" content="300">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
-    <div class="background"></div>
-    <div id="content" style="text-align: center;">
-        <fieldset>
-          <legend><h2><u>Login</u></h2></legend>
-          <br><br>
-          <form action="/login" method="post">
-          <label for="username">Username or Email:</label><br>
-          <input type="text" id="username" name="username" required><br><br>
-        
-          <label for="password">Password:</label><br>
-          <input type="password" id="password" name="password" required>
-          <h5 id="h"><a href="link">Forgot password?</a></h5>
-          
-          <input type="submit" value="Login" style="color: blue; font-size: smaller;">
-          <br>
-          <br>
+    <div class="container">
+        <!--login-->
+        <div class="form-box login">
+            <form action="#">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class=" btn">Login</button>
+                <p>or login with social platforms</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
 
-          <h4 id="hh"><a href="signup.html" style="color:blue;">You don't have an account? Sign up</a></h4>
-          </form>
-          <br>
-        </fieldset>
+        <!--register -->
+        <div class="form-box register">
+            <form action="#">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <button type="submit" class=" btn">Register</button>
+                <p>or register with social platforms</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <!--toggle-->
+        <div class="toggle-box">
+            <!--toggle box left-->
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome</h1>
+                <p>Don't have an Account</p>
+                <button class="btn register-btn">Register</button>
+            </div>
+
+            <!--toggle box right-->
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an Account</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+
     </div>
 </body>
+<script src="login.js"></script>
 </html>
